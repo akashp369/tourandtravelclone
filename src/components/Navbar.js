@@ -24,7 +24,7 @@ export default function Navbar() {
                     )
                 })
             }
-            <button>Sign up</button>
+            <Link to='/signup'><button>Sign up</button></Link>
         </ul>
       </nav>
     </div>
