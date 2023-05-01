@@ -2,23 +2,29 @@ import './NavbarStyles.css'
 import {Link} from 'react-router-dom'
 import { MenuItems } from './MenuItem'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Navbar() {
+  const[toggle, setToggle]=useState(true)
   return (
     <div>
       <nav className="NavbarItems">
         <h1 className="navbar-logo">Trippy</h1>
-        <ul className='nav-menu'>
+        <div className='menu-icons'>
+          <i className={toggle?'fas fa-bars' : 'fas fa-times'} onClick={()=>{setToggle(!toggle)}}></i>
+          
+        </div>
+        <ul className={toggle?'nav-menu':'nav-menu active'}>
             {
                 MenuItems.map((e, ind)=>{
                     return (
                         <li key={ind}>
-                            <Link to={e.url}><i className={e.icon}></i> {e.title}</Link>
+                            <Link className={e.cName} to={e.url}><i className={e.icon}></i> {e.title}</Link>
                         </li>
                     )
                 })
             }
+            <button>Sign up</button>
         </ul>
       </nav>
     </div>
