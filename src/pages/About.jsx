@@ -8,9 +8,8 @@ export default function About() {
       <Hero  
       cName='hero-mid' heroImg={AboutImg}
       title='About'  
-      
-      
       />
+      
     </>
   )
 }
