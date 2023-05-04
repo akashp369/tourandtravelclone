@@ -1,5 +1,6 @@
 import React from 'react'
 import './HeroStyles.css'
+
 export default function Hero(props) {
   return (
     <div className={props.cName}>

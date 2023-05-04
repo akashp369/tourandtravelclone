@@ -1,18 +1,20 @@
 import React from 'react'
 import Hero from '../components/Hero'
-
+import Homeimg from '../assest/12.jpg'
+import Destination from '../components/Destination'
 
 export default function Home() {
   return (
     <>
       <Hero  
-      cName='hero' heroImg='https://st2.depositphotos.com/3725083/5485/i/950/depositphotos_54856347-stock-photo-travel-the-world-monument-concept.jpg'
+      cName='hero' heroImg={Homeimg}
       title='Your Journey Your Story'  
       text='Choose Your Favourite Destination'
       buttonText='Travel Plan'
       url='/'
       btnClass='show'
       />
+      <Destination />
     </>
   )
 }
